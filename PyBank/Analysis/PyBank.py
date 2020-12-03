@@ -2,18 +2,15 @@
 import os 
 import csv
 
-
 #set path for csv file
 csvpath = os.path.join("Desktop", "GitHub", "python_challenge", "PyBank", "Resources", "budget_data.csv")
-
 
 #open csv 
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
-    print(csvreader)
+    #print(csvreader)
     
     #creates lists for data
-    csv_header = next(csvreader)
     total_months = []
     total = []
     monthly_changes = []
@@ -23,7 +20,8 @@ with open(csvpath) as csvfile:
     greatest_increase = 0
     greatest_decrease = 0
 
-    print(f"CSV Header: {csv_header}")
+    csv_header = next(csvreader)
+    #print(f"CSV Header: {csv_header}")
     
     #reads each row of data
     for row in csvreader:
