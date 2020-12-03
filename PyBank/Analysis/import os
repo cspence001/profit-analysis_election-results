@@ -1,0 +1,5 @@
+import os 
+import csv
+
+#set path for csv file
+csvpath = os.path.join("Desktop", "GitHub", "python_challenge", "PyBank", "Resources", "budget_data.csv")
