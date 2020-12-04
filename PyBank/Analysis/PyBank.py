@@ -80,7 +80,16 @@ with open(csvpath) as csvfile:
     print("Average Change: ", "$",(average_change))
     print("Greatest Increase in Profits: ", (increase_month), "$",(greatest_increase))
     print("Greatest Decrease in Profits: ", (decrease_month), "$",(greatest_decrease))
-
     
     
-        
+    f = open("PyBank.txt", "w")
+    f.write("Total Months: 86")
+    f.write("Financial Analysis")
+    f.write("---------------------------")
+    f.write("Total Months:  86")
+    f.write("Total:  38382578")
+    f.write("Average Change:  $ -2315.1176470588234")
+    f.write("Greatest Increase in Profits:  Feb-12 $ 1926159")
+    f.write("Greatest Decrease in Profits:  Sep-13 $ -2196167")
+    f.close()
+    
