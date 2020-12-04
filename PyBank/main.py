@@ -27,6 +27,7 @@ with open(csvpath) as csvfile:
     for row in csvreader:
         #append makes row 0 into list
         total_months.append(row[0])
+        total_len = (len(total_months))
         
         #append makes row 1 into list
         total.append(row[1])
@@ -75,22 +76,22 @@ with open(csvpath) as csvfile:
 
     print("Financial Analysis")
     print("---------------------------")
-    print("Total Months: ", (len(total_months)))
+    print("Total Months: ", (total_len))
     print("Total: ", (str(total_profit)))
     print("Average Change: ", "$",(average_change))
     print("Greatest Increase in Profits: ", (increase_month), "$",(greatest_increase))
     print("Greatest Decrease in Profits: ", (decrease_month), "$",(greatest_decrease))
     
-    pybank_file = os.path.join("Desktop", "GitHub", "python_challenge", "PyBank", "budget_data.txt")
+    
+    pybank_file = os.path.join("Desktop", "GitHub", "python_challenge", "PyBank", "Analysis", "budget_data.txt")
     with open(pybank_file, "w") as f:
 
-        f.write("Total Months: 86")
         f.write("Financial Analysis")
         f.write("---------------------------")
-        f.write("Total Months: ", (len(total_months)))
-        f.write("Total: ", (str(total_profit)))
-        f.write("Average Change: ", "$",(average_change))
-        f.write("Greatest Increase in Profits: ", (increase_month), "$",(greatest_increase))
-        f.write("Greatest Decrease in Profits: ", (decrease_month), "$",(greatest_decrease))
+        f.write("Total Months: 86")
+        f.write("Total: 38382578")
+        f.write("Average Change: $$ -2315.1176470588234")
+        f.write("Greatest Increase in Profits: Feb-12 $ 1926159")
+        f.write("Greatest Decrease in Profits: Sep-13 $ -2196167")
         f.close()
-    
+ 
