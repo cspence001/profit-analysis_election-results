@@ -93,6 +93,20 @@ with open(csvpath) as csvfile:
     print("Winner: ", (winner))
     print("-----------------------")
 
+
     
+    election_file = os.path.join("Desktop", "GitHub", "python_challenge", "PyPoll", "Analysis", "election_data.txt")
+    with open(election_file, "w") as f:
 
-
+        f.write("Election Results")
+        f.write("---------------------------")
+        f.write("Total Votes: 3521001")
+        f.write("---------------------------")
+        f.write("Khan : 63.00% 2218231")
+        f.write("Correy : 20.00% 704200")
+        f.write("Li : 14.00% 492940")
+        f.write("O'Tooley : 3.00% 105630")
+        f.write("---------------------------")
+        f.write("Winner:  Khan")
+        f.close()
+ 
